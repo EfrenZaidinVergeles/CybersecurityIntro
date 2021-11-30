@@ -95,20 +95,22 @@ client@bar:~$ nc "server ip" 4444 (To specify shell, –e /bin/bash)
 
 **Transfering files**
 
-server
-cat file.zip | nc -lvp 1234
+```console
+listener@bar:~$ cat file.zip | nc -lvp 1234
+```
 
-client
-netcat "server ip" 1234 > file.zip
-
+```console
+client@bar:~$ netcat "server ip" 1234 > file.zip
+```
 or:
 
-server
-nc "client ip" 1234 < file.zip
+```console
+listener@bar:~$ nc "client ip" 1234 < file.zip
+```
 
-client
-nc -lvp 1234 > file.zip
-
+```console
+client@bar:~$ nc -lvp 1234 > file.zip
+```
 
 Test port status
 
