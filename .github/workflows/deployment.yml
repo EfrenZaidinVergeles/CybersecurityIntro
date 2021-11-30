@@ -1,0 +1,14 @@
+name: Test Deployment
+
+on: [push]
+
+jobs:
+  hello:
+    name: Hello World
+    runs-on: ubuntu-latest # Change to self-hosted to run in your pc
+    steps:
+      - name: Hello World
+        run: |
+        echo "Hello World"
+        
+#TODO: Implement a static scanner https://github.com/fabpot/local-php-security-checker
